@@ -5,7 +5,11 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@src/*": ["./app/src/*"],
+      "@api/*": ["./app/api/*"]
+    }
   },
   "include": [
     "**/*.ts",
