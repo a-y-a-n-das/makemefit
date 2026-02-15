@@ -1,3 +1,5 @@
+"use client"; 
+
 import { Activity, ArrowRight, Dumbbell } from "lucide-react";
 
 export default function Hero() {
@@ -29,7 +31,7 @@ export default function Hero() {
             <button className="hidden font-medium text-gray-600 transition-colors hover:text-purple-600 sm:inline-flex">
               Pricing
             </button>
-            <button className="rounded-full bg-gradient-to-r from-purple-600 to-purple-700 px-6 py-2.5 font-semibold text-white shadow-lg shadow-purple-500/30 transition-all hover:scale-105 hover:shadow-xl hover:shadow-purple-500/40">
+            <button className="rounded-full bg-gradient-to-r from-purple-600 to-purple-700 px-6 py-2.5 font-semibold text-white shadow-lg shadow-purple-500/30 transition-all hover:scale-105 hover:shadow-xl hover:shadow-purple-500/40" onClick={()=>{window.location.href="/login"}}>
               Login
             </button>
           </div>
