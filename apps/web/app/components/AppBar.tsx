@@ -5,15 +5,6 @@ export default function AppBar() {
   return (
     <nav className="bg-white shadow-md h-18">
       <div className="mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2 hidden lg:flex ">
-          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-purple-600">
-            <Dumbbell className="h-5 w-5 text-white" />
-          </div>
-          <span className="text-2xl font-bold">
-            <span className="text-gray-900">makeme</span>
-            <span className="text-purple-600">fit</span>
-          </span>
-        </div>
         <div className="w-full flex justify-between">
           <div className="flex items-center lg:ml-16">
             <svg
