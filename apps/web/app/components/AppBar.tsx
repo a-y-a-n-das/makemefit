@@ -6,7 +6,7 @@ export default function AppBar() {
     <nav className="bg-white shadow-md h-18">
       <div className="mx-auto px-4 py-4 flex items-center justify-between">
         <div className="w-full flex justify-between">
-          <div className="flex items-center lg:ml-16">
+          <div className="flex items-center lg:ml-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
