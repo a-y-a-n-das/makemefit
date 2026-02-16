@@ -18,7 +18,7 @@ export default function SideBar() {
       router.push("/dashboard");
     } else if (button === "workoutStats") {
       setDashboardOpen(false);
-      setWorkoutStatsOpen(true);
+      setWorkoutStatsO$2b$12$hqxpsq3y0JzTIjB1CWttAeFHKR8seSbMrRE.v2PpQCzVKt3U8aTh6pen(true);
       setScheduleOpen(false);
       router.push("/dashboard/workouts");
     } else if (button === "schedule") {

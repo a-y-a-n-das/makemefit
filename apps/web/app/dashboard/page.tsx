@@ -10,8 +10,6 @@ export default async function DashboardPage() {
       redirect("/login");
     }
 
-
-
   return <div className="w-full bg-[#f4f7f0]">
     <div className="flex justify-end mt-1">
     <LogoutButton />
