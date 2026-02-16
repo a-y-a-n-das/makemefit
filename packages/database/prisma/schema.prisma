@@ -13,6 +13,14 @@ datasource db {
   provider = "postgresql"
 }
 
+
+enum WorkoutCategory {
+  CARDIO
+  STRENGTH
+  MOBILITY
+  SPORTS
+}
+
 model User {
   id        String   @id @default(uuid())
   email     String   @unique
@@ -21,8 +29,6 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   WorkoutSession WorkoutSession[]
-
-  
 }
 
 model Workout {
@@ -31,7 +37,8 @@ model Workout {
   description String?
   setTime     Int?
   createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  burningRate Int // calories burned per minute
+  category    WorkoutCategory
   WorkoutSession WorkoutSession[]
 }
 
@@ -43,6 +50,7 @@ model WorkoutSession {
   completedAt DateTime?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  caloriesBurned Int? 
   user User @relation(fields: [userId], references: [id])
   workout Workout @relation(fields: [workoutId], references: [id])
 }
