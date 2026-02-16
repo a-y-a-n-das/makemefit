@@ -32,31 +32,25 @@ export default  function LoginForm() {
     }
 
     return (
-    <div className="relative min-h-screen overflow-hidden px-6 py-12">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-[10%] top-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-purple-300/40 blur-3xl" />
-        <div className="absolute right-[10%] bottom-[10%] h-[400px] w-[400px] animate-pulse rounded-full bg-pink-300/40 blur-3xl animation-delay-2000" />
-      </div>
-
+    <div className="min-h-screen px-6 py-12">
       <div className="mx-auto max-w-md">
         {/* Logo */}
         <div className="mb-8 flex justify-center">
           <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-600 via-purple-600 to-pink-600 shadow-xl shadow-purple-500/30">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-600">
               <Dumbbell className="h-6 w-6 text-white" />
             </div>
             <span className="text-2xl font-bold">
               <span className="text-gray-900">makeme</span>
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">fit</span>
+              <span className="text-purple-600">fit</span>
             </span>
           </div>
         </div>
 
         {/* Login Card */}
-        <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-2xl backdrop-blur-sm">
+        <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
           <div className="mb-8 text-center">
-            <h2 className="mb-2 text-3xl font-extrabold text-gray-900">Welcome Back</h2>
+            <h2 className="mb-2 text-3xl font-bold text-gray-900">Welcome Back</h2>
             <p className="text-gray-600">Sign in to continue your fitness journey</p>
           </div>
 
@@ -102,17 +96,17 @@ export default  function LoginForm() {
             <button
               type="submit"
               disabled={isLoading}
-              className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-4 text-lg font-bold text-white shadow-2xl shadow-purple-500/40 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-6 py-4 text-lg font-semibold text-white hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? "Signing In..." : "Sign In"}
-              {!isLoading && <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />}
+              {!isLoading && <ArrowRight className="h-5 w-5" />}
             </button>
           </form>
 
           <div className="mt-6 text-center">
             <p className="text-gray-600">
               Don't have an account?{" "}
-              <a href="/signup" className="font-semibold text-purple-600 transition-colors hover:text-pink-600">
+              <a href="/signup" className="font-semibold text-purple-600 hover:text-purple-700">
                 Sign up
               </a>
             </p>
