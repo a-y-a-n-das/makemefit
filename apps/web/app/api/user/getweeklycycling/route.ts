@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 
 
 
-export default async function GET(request: Request) {
+export  async function GET(request: Request) {
     const session = await getServerSession(authOptions);
     try {
         const user = await prisma.user.findUnique({
