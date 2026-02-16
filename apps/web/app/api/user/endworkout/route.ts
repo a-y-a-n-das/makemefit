@@ -2,7 +2,7 @@ import { authOptions } from "@api/auth/[...nextauth]/route";
 import { prisma } from "@repo/db";
 import { getServerSession } from "next-auth";
 
-export default async function POST(request: Request) {
+export default async function PUT(request: Request) {
   const session = await getServerSession(authOptions);
 
   try {
@@ -45,6 +45,7 @@ export default async function POST(request: Request) {
         data: {
             completedAt: competedAtDate,
             caloriesBurned: caloriesBurned,
+            duration: Math.round(duration),
         },
     }); 
 
