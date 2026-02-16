@@ -1,28 +1,33 @@
 "use client";
 
 import { Dumbbell } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function SideBar() {
   const [dashboardOpen, setDashboardOpen] = useState(false);
   const [workoutStatsOpen, setWorkoutStatsOpen] = useState(false);
   const [scheduleOpen, setScheduleOpen] = useState(false);
+  const router = useRouter();
 
   const setButtonState = (button: string) => {
     if (button === "dashboard") {
       setDashboardOpen(true);
       setWorkoutStatsOpen(false);
       setScheduleOpen(false);
+      router.push("/dashboard");
     } else if (button === "workoutStats") {
       setDashboardOpen(false);
       setWorkoutStatsOpen(true);
       setScheduleOpen(false);
+      router.push("/dashboard/workouts");
     } else if (button === "schedule") {
       setDashboardOpen(false);
       setWorkoutStatsOpen(false);
       setScheduleOpen(true);
+      router.push("/dashboard/schedule");
     }
-  }
+  };
   return (
     <aside className=" hidden lg:flex lg:w-64 bg-white shadow-md flex-col">
       <div className="flex items-center gap-2 hidden lg:flex px-6 py-6">
