@@ -2,7 +2,7 @@ import { authOptions } from "@api/auth/[...nextauth]/route";
 import { prisma } from "@repo/db";
 import { getServerSession } from "next-auth";
 
-export default async function PUT(request: Request) {
+export default async function POST(request: Request) {
   const session = await getServerSession(authOptions);
 
   try {
