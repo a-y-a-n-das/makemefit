@@ -50,6 +50,7 @@ model WorkoutSession {
   completedAt DateTime?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  duration    Int? // duration in minutes
   caloriesBurned Int? 
   user User @relation(fields: [userId], references: [id])
   workout Workout @relation(fields: [workoutId], references: [id])
