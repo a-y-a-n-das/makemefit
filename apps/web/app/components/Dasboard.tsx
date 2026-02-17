@@ -22,6 +22,30 @@ export default async function Dashboard() {
     { name: "", Running: null },
   ];
         
+     const dataRunning = [
+    {name: "", Running: null, type: "running"},
+    { name: "Mon", Running: 3 },
+    { name: "Tue", Running: 4 },
+    { name: "Wed", Running: 2 },
+    { name: "Thu", Running: 5 },
+    { name: "Fri", Running: 3 },
+    { name: "Sat", Running: 6 },
+    { name: "Sun", Running: 4 },
+    { name: "", Running: null },
+  ];
+        
+     const dataCycling = [
+    {name: "", Running: null, type: "cycling"},
+    { name: "Mon", Running: 3 },
+    { name: "Tue", Running: 4 },
+    { name: "Wed", Running: 2 },
+    { name: "Thu", Running: 5 },
+    { name: "Fri", Running: 3 },
+    { name: "Sat", Running: 6 },
+    { name: "Sun", Running: 4 },
+    { name: "", Running: null },
+  ];
+        
   return <div className="w-full h-full p-4 space-y-6">
     {/* Daily Cards Section */}
     <div className="flex flex-col md:flex-row gap-4">
@@ -45,8 +69,8 @@ export default async function Dashboard() {
 
     {/* Specific Workout Charts Grid */}
     <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pl-3">
-      <SpecificWorkoutChart data={data}/>
-      <SpecificWorkoutChart data={data}/>
+      <SpecificWorkoutChart data={dataRunning}/>
+      <SpecificWorkoutChart data={dataCycling}/>
       <SpecificWorkoutChart data={data}/>
     </div>
   </div>;

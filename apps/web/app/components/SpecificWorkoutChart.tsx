@@ -61,18 +61,7 @@ export default function SpecificWorkoutChart(props: { data: any[] }) {
 
 
     const Cycling = "./cycling.svg";
-  const data = [
-    { name: "", Running: null },
-    { name: "Jan", Running: 3 },
-    { name: "Feb", Running: 4 },
-    { name: "Mar", Running: 2 },
-    { name: "Apr", Running: 5 },
-    { name: "May", Running: 3 },
-    { name: "Jun", Running: 6 },
-    { name: "Jul", Running: 4 },
-    { name: "", Running: null },
-  ];
-
+  const {data} = props;
 
 
 
