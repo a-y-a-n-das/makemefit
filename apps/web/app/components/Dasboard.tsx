@@ -11,7 +11,7 @@ export default async function Dashboard() {
     const session = await getServerSession(authOptions);
       
      const data = [
-    {name: "", Running: null },
+    {name: "", Running: null, type: "swimming"},
     { name: "Mon", Running: 3 },
     { name: "Tue", Running: 4 },
     { name: "Wed", Running: 2 },
@@ -44,7 +44,7 @@ export default async function Dashboard() {
     </div>
 
     {/* Specific Workout Charts Grid */}
-    <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pl-3">
       <SpecificWorkoutChart data={data}/>
       <SpecificWorkoutChart data={data}/>
       <SpecificWorkoutChart data={data}/>
