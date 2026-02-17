@@ -4,7 +4,8 @@ import Image from "next/image";
 
 export default function DailyCard(props: { km: number; type: string }) {
   const runningLogo = props.type === "running" ? "./running.svg" : "./cycling.svg";
-  const progress = Math.min(props.km / 10, 1) * 100; // Assuming 10 km is the goal for 100%
+  const goal = (props.type === "running" ? 10 : 20); // Example goals: 10 km for running, 20 km for cycling
+  const progress = Math.min(props.km / goal, 1) * 100; // Assuming 10 km is the goal for 100%
 
   return (
     <div className="w-full bg-white rounded-lg shadow-md flex flex-col items-center justify-center ">

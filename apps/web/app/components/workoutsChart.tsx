@@ -29,7 +29,7 @@ export default function WorkoutsChart(props: {data: any[]}) {
       </div>
 
       {/* Chart */}
-      <div className="w-full h-64 ">
+      <div className="w-full h-80 ">
         <ResponsiveContainer width="100%" height="100%"  >
           <LineChart data={data} margin={{ top: 5, right: 10, left: 5, bottom: 10 }} >
             <CartesianGrid strokeDasharray="3 3" vertical={false}  />

@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import {
   AreaChart,
   XAxis,
@@ -11,6 +11,8 @@ import {
 } from "recharts";
 
 export default function SpecificWorkoutChart(props: { data: any[] }) {
+
+    const Cycling = "./cycling.svg";
   const data = [
     { name: "", Running: null },
     { name: "Jan", Running: 3 },
@@ -27,13 +29,20 @@ export default function SpecificWorkoutChart(props: { data: any[] }) {
     <div className="bg-white rounded-2xl shadow-sm p-6 w-full">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
+        <div className=" flex items-center gap-3">
+
+        <div className="rounded-xl p-2.5 bg-[#3057e6] ">
+            <Image src={Cycling} alt="Cycling Logo" width={32} height={32} className="invert" />
+        </div>
         <div>
           <h2 className="text-lg font-semibold text-gray-800">Running</h2>
+        <p className="text-gray-600 font-medium">
+            It never gets easier, you just get faster. 
+        </p>
         </div>
 
-        <button className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-xl text-sm">
-          Running
-        </button>
+        </div>
+     
       </div>
 
       {/* Chart */}
