@@ -10,10 +10,10 @@ import {
     ResponsiveContainer,
   } from "recharts";
 
-export default function WorkoutsChart(props: {data: any[]}) {
-    const { data } = props;
+export default function WorkoutsChart(props: {data: any[], height: string}) {
+    const { data, height } = props;
 
-  return <div className="bg-white rounded-2xl shadow-sm p-6 w-full">
+  return <div className="bg-white rounded-2xl shadow-sm p-6 w-full h-full">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
@@ -29,7 +29,7 @@ export default function WorkoutsChart(props: {data: any[]}) {
       </div>
 
       {/* Chart */}
-      <div className="w-full h-80 ">
+      <div className="w-full" style={{ height: `${height}rem` }}>
         <ResponsiveContainer width="100%" height="100%"  >
           <LineChart data={data} margin={{ top: 5, right: 10, left: 5, bottom: 10 }} >
             <CartesianGrid strokeDasharray="3 3" vertical={false}  />

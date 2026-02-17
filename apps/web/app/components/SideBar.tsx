@@ -29,7 +29,7 @@ export default function SideBar() {
     }
   };
   return (
-    <aside className=" hidden lg:flex lg:w-64 bg-white shadow-md flex-col">
+    <aside className=" hidden lg:flex lg:w-80 bg-white shadow-md flex-col">
       <div className="flex items-center gap-2 hidden lg:flex px-6 py-6">
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-600">
           <Dumbbell className="h-5 w-5 text-white" />

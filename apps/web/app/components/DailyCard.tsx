@@ -8,13 +8,13 @@ export default function DailyCard(props: { km: number; type: string }) {
   const progress = Math.min(props.km / goal, 1) * 100; // Assuming 10 km is the goal for 100%
 
   return (
-    <div className="w-full bg-white rounded-lg shadow-md flex flex-col items-center justify-center ">
-      <div className="flex flex-col items-center text-center p-6 pb-3">
+    <div className="w-full bg-white rounded-lg shadow-md flex flex-col justify-between mr-3 ml-3 h-35  ">
+      <div className="flex items-center justify-start pt-10 pl-8  gap-4">
 
-      <div className="bg-blue-200 rounded-full p-3 mb-4 border border-blue-400">
+      <div className="bg-blue-200 rounded-full p-3.5 border border-blue-400">
         <Image src={runningLogo} alt="Running Logo" width={32} height={32} />
       </div>
-      <div className="flex flex-col text-xl font-semibold ">
+      <div className="flex flex-col gap-1 text-2xl font-semibold ">
         <div>
         {props.km} km 
         </div>
@@ -23,8 +23,8 @@ export default function DailyCard(props: { km: number; type: string }) {
         </div>
       </div>
       </div>
-      <div className="w-full flex justify-start">
-      <div className={`h-1 bg-blue-600 rounded-b-full ${progress === 100 ? "bg-green-500" : "rounded-r-full"} pb-1.5 `} style={{width:`${progress}%`}}></div>
+      <div className="w-full flex justify-start ">
+      <div className={`h-1 bg-blue-600 rounded-b-full ${progress === 100 ? "bg-green-500" : ""} pb-1.5 `} style={{width:`${progress}%`}}></div>
       </div>
     </div>
   );
