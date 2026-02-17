@@ -23,7 +23,7 @@ export default function DailyCard(props: { km: number; type: string }) {
       </div>
       </div>
       <div className="w-full flex justify-start">
-      <div className={`w-[${progress}%] h-1 bg-blue-600 rounded-b-full ${progress === 100 ? "bg-green-500" : "rounded-r-full"} pb-1.5 `}></div>
+      <div className={`h-1 bg-blue-600 rounded-b-full ${progress === 100 ? "bg-green-500" : "rounded-r-full"} pb-1.5 `} style={{width:`${progress}%`}}></div>
       </div>
     </div>
   );
